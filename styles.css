@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745; 
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+button:hover {
+    background-color: #1e7e34; 
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+button:active {
+    background-color: #18692a;
+    transform: translateY(0px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#new-password , #confirm-password, #email {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#success-message {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-checkmark {
+    font-size: 40px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* Ocultamos por defecto */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+#reset-message, #set-password-message {
+    margin-top: 15px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.error-shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 450px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
